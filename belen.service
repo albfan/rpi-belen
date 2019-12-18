@@ -1,0 +1,14 @@
+[Unit]
+Description=interactive belen
+After=network.target
+
+[Service]
+ExecStart=/home/pi/belen/belen.py
+WorkingDirectory=/home/pi/belen
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
